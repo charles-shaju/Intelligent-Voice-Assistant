@@ -1,0 +1,62 @@
+{"intents": [
+    {
+      "tag": "greeting",
+      "patterns": ["Hey", "Hello", "Hi", "What's up?", "Good Day"],
+      "responses": ["Hello there!", "Hello, what can I do for you?","Hello sir, friday at your service","I'm listening","yes sir, i am listening"]
+    },
+    {
+       "tag": "exit",
+      "patterns": ["Bye", "See you", "Quit","Offline","Exit","Stop"],
+      "responses": ["Thank you for spending time with me.","good bye sir","see you ,sir"]
+    },
+    {
+      "tag":"how are you",
+      "patterns":["How are you","How do you do","How are you doing"],
+      "responses":["i am fine","i am a virtual assistant, how can i get tired, use your brain dummy!","I am better than i was, but not nearly as good as i am going to be","somewhere between better and best ","much better now that you are here","Armed and Ready"]
+    },
+    {
+      "tag":"whatsapp",
+      "patterns":["send a whatsapp message","whatsapp message"],
+      "responses":[""]
+    },
+    {
+      "tag":"email",
+      "patterns":["send email","send mail","gmail"],
+      "responses":[""]
+    },
+    {
+      "tag": "climate",
+      "patterns":["weather","tell me the weather","climate"],
+      "responses":[""]
+    },
+    {
+      "tag": "news",
+      "patterns":["today's news","news","what is the news?","tell me about the news"],
+      "responses":[""]
+    },
+    {
+      "tag": "google",
+      "patterns":["search","search in google","google","open browser"],
+      "responses":[""]
+    },
+    {
+      "tag": "now",
+      "patterns":["what is the time?","time"],
+      "responses":[""]
+    },
+    {
+      "tag": "today",
+      "patterns":["today's date?","date"],
+      "responses":[""]
+    },
+    {
+      "tag":"corona",
+      "patterns":["corona report","covid report","corona count","covid count","covid-19"],
+      "responses":[""]
+    },
+    {
+      "tag": "comedy",
+      "patterns":["tell me a joke","comedy","joke","tell me something funny"],
+      "responses":[""]
+    }
+  ]}
