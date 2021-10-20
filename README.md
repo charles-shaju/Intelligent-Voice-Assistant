@@ -3,7 +3,7 @@ A intelligent voice assistant that uses tensorflow to identify the commands that
 
 ## To make this code work:
 1. You should have python and tensorflow installed in your system
-2. Paste the neuralintent folder to your `python/lib/sites-packages` on your system.
+2. Paste the neuralintent folder to your `AppData\Local\Programs\Python\Python39\Lib\site-packages` on your system.
 
 This is completely a python file, so you can run this in the terminal by: python main.py
 
