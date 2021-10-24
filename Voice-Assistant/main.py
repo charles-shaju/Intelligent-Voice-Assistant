@@ -18,19 +18,20 @@ import wolframalpha
 import wikipedia
 from bs4 import BeautifulSoup
 
+#Initialising the text-to-speech engine
 engine = pyttsx3.init()
 voices = engine.getProperty('voices')
 engine.setProperty('voice', voices[1].id)
-engine.setProperty("rate", 150)
+engine.setProperty("rate", 150) #configuring the engine
 user = "Charles"
 
-
+#function to run the engine
 def say(audiostring):
     print(audiostring)
     engine.say(audiostring)
     engine.runAndWait()
 
-
+#function to record the users's speech and converting it to text
 def record():
     r = sr.Recognizer()
     with sr.Microphone(device_index=0) as source:
@@ -43,7 +44,7 @@ def record():
             except sr.UnknownValueError:
                 print('sorry, i didnt understand')
             if 'what' in data or 'which' in data or 'who' in data or 'when' in data or 'explain' in data or 'describe' in data or 'define' in data:
-                  try:
+                  try:#reply the 'wh' questions
                     app_id = '7JKRXQ-AQW9YQJQJT'
                     client = wolframalpha.Client(app_id)
                     res1 = client.query(data)
@@ -61,7 +62,7 @@ def record():
     return data
 
     
-
+#function to stop the program and provide specific results
 def stop():
   time = datetime.datetime.now().hour
   if(time >= 21) and (time < 6):
@@ -70,7 +71,7 @@ def stop():
     say(f"Bye {user}")
   sys.exit(0)
 
-
+#greeting
 hour = datetime.datetime.now().hour
 if(hour >= 6) and (hour < 12):
     say(f"Good Morning {user}")
@@ -81,7 +82,7 @@ elif(hour >= 18) and (hour < 21):
 say("how may i assist you")
 
 
-
+#to send email
 def sendemail():
     email_list = {
         "tom": "vyinghope90@gmail.com"
@@ -106,7 +107,7 @@ def sendemail():
         print(e)
         say("Unable to send the Email")
 
-
+#to find the weather condition
 def weather():
     city = "thrissur"
     city = city + " weather"
@@ -125,7 +126,7 @@ def weather():
     say(f"temperature is {weather1}"+"°C")
 
 
-
+#to find todays news
 def today_news():
     url = 'https://newsapi.org/v2/everything?'
     parameters = {
@@ -168,7 +169,7 @@ def friday(data):
         say(wikipedia.summary(data,sentences=2))
 
 
-
+#mappings made for specific querys to the corresponding functions.If a query, in patterns of the  intents.json file is identified,we perform thesexcorresponding fuctions
 mappings = {
     "exit": stop,
     "email": sendemail,
@@ -181,13 +182,14 @@ mappings = {
     "comedy": joke,
     }
 
+#training the model with data
 assistant = GenericAssistant('intents.json', intent_methods=mappings)
 assistant.train_model()
 assistant.save_model()
 assistant.load_model()
 
 
-
+#function that provide the input for querys the model asks
 def record1():
     r = sr.Recognizer()
     with sr.Microphone(device_index=0) as source:
