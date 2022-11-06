@@ -21,4 +21,6 @@ This is completely a python file, so you can run this in the terminal by: python
 9. Can tell you News on articles
 10. Also you can add any commands and corresponding replies in the intent.json file
 
+For More Info (https://charles-shaju.github.io/ "click here")
+
 >Enjoy
