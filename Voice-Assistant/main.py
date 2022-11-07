@@ -94,7 +94,7 @@ def sendemail():
         email["To"] = email_list[name]
         say("What is the subject of your e-mail")
         email["Subject"] = record()
-        email["From"] = "padayatty90@gmail.com"
+        email["From"] = "Email address"
         say("What should i Say?")
         email.set_content(record())
         s = smtplib.SMTP("smtp.gmail.com", 587)
