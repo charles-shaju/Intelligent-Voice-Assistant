@@ -21,6 +21,6 @@ This is completely a python file, so you can run this in the terminal by: python
 9. Can tell you News on articles
 10. Also you can add any commands and corresponding replies in the intent.json file
 
-For More Info [click here](https://charles-shaju.github.io/ "Data Lab")
+For More Info [click here](https://medium.com/@charlesshaju00/build-a-siri-that-talks-backs-to-you-c980ddd0f6a3 " Build a siri that talks back at you")
 
 >Enjoy
