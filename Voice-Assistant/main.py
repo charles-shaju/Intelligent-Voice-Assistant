@@ -99,7 +99,7 @@ def sendemail():
         email.set_content(record())
         s = smtplib.SMTP("smtp.gmail.com", 587)
         s.starttls()
-        s.login('padayatty90@gmail.com', 'whatsthematterwithyouubloodyfool')
+        s.login('email address', 'password')
         s.send_message(email)
         s.close()
         say("Email has Sent")
